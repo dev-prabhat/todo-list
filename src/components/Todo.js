@@ -1,8 +1,9 @@
-const Todo = ({ id, name, age, handleDelete, handleEdit }) => {
+const Todo = ({ id, name, age, date, handleDelete, handleEdit }) => {
     return (
         <tr>
             <td>{name}</td>
             <td>{age}</td>
+            <td>{date}</td>
             <td>
                 <button onClick={() => handleDelete(id)}>Delete</button>
             </td>

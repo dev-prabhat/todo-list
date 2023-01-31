@@ -19,7 +19,7 @@ function App() {
     if (todoText.age <= 0) {
       return alert("Age should be positive number")
     }
-    setTodoList(prev => [...prev, { id: uuid(), name: todoText.name, age: todoText.age }])
+    setTodoList(prev => [...prev, { id: uuid(), name: todoText.name, age: todoText.age, date: new Date().toJSON().slice(0, 10).replace(/-/g, '/') }])
     setTodoText({ name: "", age: "" })
   }
 
@@ -107,6 +107,7 @@ function App() {
           <tr>
             <th>Name</th>
             <th>Age</th>
+            <th>Date</th>
             <th>Delete</th>
             <th>Edit</th>
           </tr>
